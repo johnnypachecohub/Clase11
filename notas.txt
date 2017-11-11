@@ -93,3 +93,7 @@ robomongo permite conectarse a cualquier bd de mongo
 angular material (tiene algo de parecido con bootstrap o beyondadmin)
 para instalar (solo seguir las instrucciones de su pagina web, getting started): material.angular.io 
 dentro del proyecto: ejecutar esas instrucciones 
+
+dentro de la pagina de mongo: si se uso POST seleccionar la opcion "x-www-form-urlencoded"
+
+para hacer deploy se copian todos los archivos
