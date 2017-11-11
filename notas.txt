@@ -71,6 +71,10 @@ carpeta config - cors.js
 	allRoutes = true
 	origin: '*'
 
+a parte del modelo tambien hay q crear el controlador:
+sails generate controller cursos
+sails generate api cursos (se generara tanto el controlador como el modelo)
+
 para ejecutar el sails (2 formas):
 sails lift 
 node app 
