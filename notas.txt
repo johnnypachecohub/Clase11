@@ -1,0 +1,91 @@
+home           -> autenticacion         -> autenticacion api
+autenticacion     autenticacion api        HtttpClient
+login(..)         login                    Login() {http } -> observable
+                  subscribe {
+					  autenticado = true
+				  }
+
+
+home html        home component            --> Autenticacion
+<form>           subscribe                     cambioEstado = new subscribe()
+*ngIf='!auten'       auten = cambioEstado               se comporta como Observable -> next() y Observador -> subscribe
+
+los subscribe pasan a memoria y se enteran los demas html2
+
+EventEmitter                  Emit()
+Subject                       Next
+(es observable y observador)
+
+
+canActivate
+canDeactivate
+canChildren
+canLoad -> para proteger la carga de la ruta
+
+
+Listados        Servidores      Servidores Api
+Listado()    -> Listado      -> Listado
+  Observable      Observable       Observable Array<IServidor>
+  Subscribe
+                 (se usa como capa Negocio)
+
+en el html
+entre corchetes porque lo va a evaluar el js (es una propiedad)
+entre parentesis es un evento
+
+Interceptores      /imagen/500
+    !--> peticion --> clonan --> headers --> regresa al flujo
+
+
+para verificar si tenemos sails: sails -v
+para instalar: npm i sails -g
+
+con node app se puede correr el "servidor" (cuidado con el puerto)
+
+para crear aplicaciones en sails (permite trabajar con mas de una base de datos a la vez o bd en memoria)
+sails new appRest
+
+(asi fue creado "servidores")
+sails permite crear: model, controller, api
+sails crea los metodos del crud 
+
+sails generate model nombreModelo
+
+createAt y updateAt sails lo genera de manera automatica al crear el modelo 
+
+carpeta config - connections.js 
+
+base de datos en la nube de bd mongo (Dan 0.5GB):
+mlab.com
+cloud mongo
+
+luego de registrarnos
+en mongodb deployment (gratis)
+	sandbox free
+al hacer clic en la bd creada aparecera la cadena conexion
+
+carpeta config -models.js 
+	descomentar la propiedad "connection" para que todas las clases utilicen la cadena de conexion de mongo 
+
+carpeta config - cors.js 
+	allRoutes = true
+	origin: '*'
+
+para ejecutar el sails (2 formas):
+sails lift 
+node app 
+
+opcion 3 borra toda la bd (la primera vez), las siguientes veces opcion 2
+
+eso ha generado:
+get /cursos
+get /cursos/:Id
+post /cursos
+delete /cursos/:Id
+
+mongo compass permite interactuar visualmente con la data, relaciones (preferido por el profe)
+robomongo permite conectarse a cualquier bd de mongo
+
+angular material (tiene algo de parecido con bootstrap o beyondadmin)
+para instalar (solo seguir las instrucciones de su pagina web, getting started): material.angular.io 
+dentro del proyecto: ejecutar esas instrucciones 
